@@ -1,0 +1,28 @@
+[
+  {
+    "id": "usr_student_01",
+    "studentId": "STU-2026-001",
+    "email": "student@library.edu",
+    "username": "student",
+    "passwordHash": "584988770425339697f3bcf5dfeb6e60b7405eef37a0497534c5dbbcf5778a4e",
+    "name": "Aarav Patel",
+    "role": "student",
+    "department": "Computer Science & Engineering",
+    "course": "B.Tech Computer Science",
+    "yearOfStudy": "3rd Year",
+    "createdAt": "2026-11-01T10:00:00.000Z"
+  },
+  {
+    "id": "usr_student_1793816771731",
+    "studentId": "STU-2026-088",
+    "email": "vikram.sharma@library.edu",
+    "username": "vikram.sharma",
+    "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "name": "Vikram Sharma",
+    "role": "student",
+    "department": "Data Science & Artificial Intelligence",
+    "course": "B.Tech Data Science",
+    "yearOfStudy": "2nd Year",
+    "createdAt": "2026-11-04T18:26:11.731Z"
+  }
+]

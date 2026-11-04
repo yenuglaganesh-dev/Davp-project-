@@ -1,0 +1,119 @@
+/* React Bits LogoLoop Component Styles */
+
+.logoloop-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+}
+
+.logoloop-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: logoloop-scroll var(--loop-duration, 35s) linear infinite;
+  animation-direction: var(--loop-direction, normal);
+  will-change: transform;
+}
+
+.logoloop-track.pause-hover:hover {
+  animation-play-state: paused;
+}
+
+@keyframes logoloop-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333333%);
+  }
+}
+
+.logoloop-item-link,
+.logoloop-item {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoloop-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  padding: 10px 18px;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.logoloop-card:hover {
+  background: rgba(201, 193, 124, 0.15);
+  border-color: rgba(201, 193, 124, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 193, 124, 0.25);
+}
+
+.logoloop-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #C9C17C;
+}
+
+.logoloop-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoloop-name {
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+
+.logoloop-category {
+  color: #94a3b8;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Edge Fade Gradients */
+.logoloop-container.fade-edges::before,
+.logoloop-container.fade-edges::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logoloop-container.fade-edges::before {
+  left: 0;
+  background: linear-gradient(to right, #050b18, transparent);
+}
+
+.logoloop-container.fade-edges::after {
+  right: 0;
+  background: linear-gradient(to left, #050b18, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoloop-track {
+    animation-play-state: paused;
+  }
+}
+
