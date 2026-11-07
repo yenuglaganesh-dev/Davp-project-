@@ -49,10 +49,10 @@ export default function Navbar({
         {/* Brand Logo */}
         <a href="#home" className="navbar-brand">
           <div className="brand-logo-icon">
-            <BookOpen size={22} className="logo-svg" />
+            <img src="/src/assets/logo.png" alt="CUTM Logo" className="brand-logo-img" style={{height: '22px'}} />
           </div>
           <div className="brand-text-col">
-            <span className="brand-title">DAVP<span className="brand-highlight">Library</span></span>
+            <span className="brand-title">Central Textbook Library</span>
             <span className="brand-subtitle">Academic Digital Repository & Analytics</span>
           </div>
         </a>

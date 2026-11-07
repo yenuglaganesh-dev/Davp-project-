@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="brand-logo-icon">
                 <BookOpen size={20} />
               </div>
-              <span className="brand-title">DAVP<span className="brand-highlight">Library</span></span>
+              <span className="brand-title">Central Textbook Library</span>
             </div>
             <p className="footer-about-text">
               An institutional digital library management system and exploratory inventory analytics dashboard. Dedicated to making academic textbooks and open educational resources universally accessible.
