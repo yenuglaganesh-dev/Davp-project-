@@ -1,4 +1,4 @@
-# 📚 DAVP Digital Library & Inventory Analytics Platform
+# 📚 Central Textbook Library – CUTM
 ### Production-Grade Academic Library Management, Python Analytics Engine, and Interactive Web Architecture
 
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)](https://react.dev/)
