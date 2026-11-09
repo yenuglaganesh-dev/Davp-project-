@@ -4,9 +4,9 @@
 
 const SUBJECT_THEMES = {
   'Computer Science': {
-    primary: '#0f172a',
+    primary: '#7BCB91',
     accent: '#38bdf8',
-    gradient: ['#0f172a', '#1e293b', '#0369a1'],
+    gradient: ['#7BCB91', '#66BB7A', '#388E55'],
     pattern: 'binary',
     icon: `<path d="M4 6h16M4 10h16M4 14h10M4 18h8" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>`
   },
@@ -34,7 +34,7 @@ const SUBJECT_THEMES = {
   'Data Science': {
     primary: '#162032',
     accent: '#60a5fa',
-    gradient: ['#0f172a', '#1e3a8a', '#1d4ed8'],
+    gradient: ['#7BCB91', '#66BB7A', '#388E55'],
     pattern: 'chart',
     icon: `<rect x="4" y="13" width="3" height="7" rx="1" fill="#60a5fa"/><rect x="10.5" y="8" width="3" height="12" rx="1" fill="#93c5fd"/><rect x="17" y="4" width="3" height="16" rx="1" fill="#38bdf8"/>`
   },
@@ -55,7 +55,7 @@ const SUBJECT_THEMES = {
   'Data Analysis and Data Mining': {
     primary: '#131e3a',
     accent: '#818cf8',
-    gradient: ['#0f172a', '#312e81', '#4338ca'],
+    gradient: ['#7BCB91', '#9BE0AB', '#66BB7A'],
     pattern: 'chart',
     icon: `<path d="M3 18h18M6 14v4M12 9v9M18 5v13" stroke="#818cf8" stroke-width="2.5" stroke-linecap="round"/>`
   },
@@ -67,9 +67,9 @@ const SUBJECT_THEMES = {
     icon: `<path d="M7 8l-4 4 4 4M17 8l4 4-4 4M13 5l-2 14" stroke="#facc15" stroke-width="2" stroke-linecap="round"/>`
   },
   'C and C++': {
-    primary: '#0f172a',
+    primary: '#7BCB91',
     accent: '#06b6d4',
-    gradient: ['#020617', '#0f172a', '#0369a1'],
+    gradient: ['#66BB7A', '#7BCB91', '#9BE0AB'],
     pattern: 'brackets',
     icon: `<path d="M12 4a8 8 0 1 0 8 8M16 12h4M18 10v4" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>`
   },
@@ -97,7 +97,7 @@ const SUBJECT_THEMES = {
   'Statistics': {
     primary: '#142838',
     accent: '#2dd4bf',
-    gradient: ['#0f172a', '#134e4a', '#047857'],
+    gradient: ['#7BCB91', '#66BB7A', '#059669'],
     pattern: 'bell',
     icon: `<path d="M3 18c4 0 5-12 9-12s5 12 9 12" stroke="#2dd4bf" stroke-width="2.5" fill="none"/>`
   },
@@ -132,7 +132,7 @@ const SUBJECT_THEMES = {
   'Geography': {
     primary: '#172554',
     accent: '#38bdf8',
-    gradient: ['#0f172a', '#1e3a8a', '#0284c7'],
+    gradient: ['#7BCB91', '#66BB7A', '#0284c7'],
     pattern: 'globe',
     icon: `<circle cx="12" cy="12" r="8" stroke="#38bdf8" stroke-width="1.5" fill="none"/><ellipse cx="12" cy="12" rx="4" ry="8" stroke="#7dd3fc" stroke-width="1" fill="none"/><line x1="4" y1="12" x2="20" y2="12" stroke="#7dd3fc" stroke-width="1"/>`
   },
@@ -160,12 +160,12 @@ const SUBJECT_THEMES = {
   'Business Management': {
     primary: '#172554',
     accent: '#f59e0b',
-    gradient: ['#0f172a', '#1e3a8a', '#3b82f6'],
+    gradient: ['#7BCB91', '#9BE0AB', '#388E55'],
     pattern: 'strategy',
     icon: `<rect x="3" y="7" width="18" height="13" rx="2" stroke="#f59e0b" stroke-width="2" fill="none"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="#fbbf24" stroke-width="2"/>`
   },
   'General Academic Textbooks': {
-    primary: '#0f172a',
+    primary: '#7BCB91',
     accent: '#818cf8',
     gradient: ['#090d16', '#1e293b', '#334155'],
     pattern: 'academic',

@@ -231,7 +231,7 @@ export default function GridMotion({
         <div
           className={`grid-motion-spotlight ${spotlightPos.active ? 'active' : ''}`}
           style={{
-            background: `radial-gradient(circle 380px at ${spotlightPos.x}% ${spotlightPos.y}%, rgba(59, 130, 246, ${spotlight * 0.45}) 0%, rgba(30, 64, 175, ${spotlight * 0.2}) 40%, transparent 75%)`
+            background: `radial-gradient(circle 380px at ${spotlightPos.x}% ${spotlightPos.y}%, rgba(123, 203, 145, ${spotlight * 0.35}) 0%, rgba(102, 187, 122, ${spotlight * 0.15}) 40%, transparent 75%)`
           }}
         />
       )}

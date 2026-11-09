@@ -35,7 +35,7 @@ export default function DriftWall({
   fade = 0.55,
   dim = 0.7,
   grayscale = false,
-  overlayColor = '#07152b',
+  overlayColor = '#F0FAF2',
   onTileClick,
   className = '',
   style = {}

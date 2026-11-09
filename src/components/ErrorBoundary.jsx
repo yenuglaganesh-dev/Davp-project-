@@ -33,25 +33,25 @@ export default class ErrorBoundary extends React.Component {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#100600',
-          color: '#ffffff',
+          backgroundColor: '#FFFFFF',
+          color: '#242424',
           padding: '24px',
           textAlign: 'center',
           fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif"
         }}>
           <div style={{
             maxWidth: '560px',
-            background: 'rgba(28, 16, 8, 0.95)',
-            border: '1px solid rgba(239, 68, 68, 0.4)',
+            background: 'var(--bg-card, #FFFFFF)',
+            border: '1px solid var(--border-subtle, #E0EEE3)',
             borderRadius: '16px',
             padding: '36px 28px',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.6)'
+            boxShadow: '0 20px 40px rgba(0,0,0,0.06)'
           }}>
             <div style={{
               width: '56px',
               height: '56px',
               borderRadius: '50%',
-              background: 'rgba(239, 68, 68, 0.15)',
+              background: 'rgba(239, 68, 68, 0.1)',
               color: '#ef4444',
               display: 'flex',
               alignItems: 'center',
@@ -60,23 +60,23 @@ export default class ErrorBoundary extends React.Component {
             }}>
               <AlertTriangle size={32} />
             </div>
-            <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '12px' }}>
+            <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '12px', color: 'var(--color-text-primary, #242424)' }}>
               Application Render Issue Recovered
             </h2>
-            <p style={{ fontSize: '14px', color: '#9ca3af', marginBottom: '24px', lineHeight: 1.6 }}>
+            <p style={{ fontSize: '14px', color: 'var(--color-text-secondary, #777777)', marginBottom: '24px', lineHeight: 1.6 }}>
               A component error occurred while rendering the page. The system caught the exception to prevent a blank screen.
             </p>
             {this.state.error && (
               <pre style={{
                 textAlign: 'left',
-                background: '#0a0400',
+                background: 'var(--bg-secondary, #F0FAF2)',
                 padding: '12px 16px',
                 borderRadius: '8px',
                 fontSize: '12px',
-                color: '#f87171',
+                color: '#b91c1c',
                 overflowX: 'auto',
                 marginBottom: '24px',
-                border: '1px solid rgba(255,255,255,0.08)'
+                border: '1px solid var(--border-subtle, #E0EEE3)'
               }}>
                 {this.state.error.toString()}
               </pre>
@@ -87,10 +87,10 @@ export default class ErrorBoundary extends React.Component {
                 onClick={this.handleReset}
                 style={{
                   padding: '10px 20px',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(255,255,255,0.2)',
-                  background: 'transparent',
-                  color: '#ffffff',
+                  borderRadius: '9999px',
+                  border: '1px solid var(--border-subtle, #E0EEE3)',
+                  background: 'var(--bg-secondary, #F0FAF2)',
+                  color: 'var(--color-text-primary, #242424)',
                   fontSize: '14px',
                   fontWeight: 600,
                   cursor: 'pointer'
@@ -103,9 +103,9 @@ export default class ErrorBoundary extends React.Component {
                 onClick={this.handleReload}
                 style={{
                   padding: '10px 20px',
-                  borderRadius: '8px',
+                  borderRadius: '9999px',
                   border: 'none',
-                  background: '#C9C17C', color: '#0f172a',
+                  background: '#7BCB91', color: '#FFFFFF',
                   fontSize: '14px',
                   fontWeight: 600,
                   cursor: 'pointer',

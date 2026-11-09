@@ -59,21 +59,7 @@ export default function LoginModal({ isOpen, onClose, initialTab = 'SIGN_IN' }) 
     }
   };
 
-  // Quick Role Demo Click (Admin & Student ONLY - Faculty completely removed)
-  const handleQuickLogin = async (credUser, credPass) => {
-    setIsSubmitting(true);
-    setErrorMsg('');
-    setSuccessMsg('');
 
-    const res = await login(credUser, credPass);
-    setIsSubmitting(false);
-
-    if (res.success) {
-      onClose();
-    } else {
-      setErrorMsg(res.error || 'Authentication failed.');
-    }
-  };
 
   // Sign Up submit
   const handleSignUp = async (e) => {
@@ -214,61 +200,8 @@ export default function LoginModal({ isOpen, onClose, initialTab = 'SIGN_IN' }) 
           {/* TAB 1: SIGN IN */}
           {activeTab === 'SIGN_IN' && (
             <div className="tab-pane-content">
-              {/* Quick Role Selection Cards: Admin & Student ONLY */}
-              <div className="preset-roles-section">
-                <h4 className="preset-heading">Quick Role Demo Access (2 Roles Only):</h4>
-                
-                <div className="preset-role-cards two-roles-grid">
-                  {/* 1. Administrator */}
-                  <div
-                    className={`preset-role-card ${user?.role === 'admin' ? 'is-current' : ''}`}
-                    onClick={() => handleQuickLogin('admin@library.edu', 'admin123')}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <div className="preset-icon-col admin-color">
-                      <ShieldCheck size={22} />
-                    </div>
-                    <div className="preset-info-col">
-                      <div className="preset-title-row">
-                        <span className="preset-name">Administrator</span>
-                        <span className="preset-badge admin-badge">admin</span>
-                      </div>
-                      <span className="preset-user">Dr. Ganesh Yenugula (admin@library.edu)</span>
-                      <span className="preset-access text-emerald">
-                        <Check size={12} /> Institutional Profile & Student Management
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* 2. Student Scholar */}
-                  <div
-                    className={`preset-role-card ${user?.role === 'student' ? 'is-current' : ''}`}
-                    onClick={() => handleQuickLogin('student@library.edu', 'student123')}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <div className="preset-icon-col student-color">
-                      <GraduationCap size={22} />
-                    </div>
-                    <div className="preset-info-col">
-                      <div className="preset-title-row">
-                        <span className="preset-name">Student Scholar</span>
-                        <span className="preset-badge student-badge">student</span>
-                      </div>
-                      <span className="preset-user">Aarav Patel (student@library.edu)</span>
-                      <span className="preset-access text-blue">
-                        <Check size={12} /> Browse Catalog, Free eBooks & Auto-Logged to Excel
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* Standard Sign In Form */}
               <div className="custom-login-section">
-                <h4 className="preset-heading">Or Sign In with University Email / Username:</h4>
-
                 <form onSubmit={handleSignIn} className="custom-login-form">
                   <div className="form-group">
                     <label className="form-label">Email Address or Username</label>

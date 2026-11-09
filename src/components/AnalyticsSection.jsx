@@ -237,7 +237,7 @@ export default function AnalyticsSection({ books = [] }) {
                         className="circle-bg"
                         d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                         fill="none"
-                        stroke="#1e293b"
+                        stroke="var(--border-subtle, #E0EEE3)"
                         strokeWidth="3.8"
                       />
                       <path
@@ -245,7 +245,7 @@ export default function AnalyticsSection({ books = [] }) {
                         strokeDasharray={`${availabilityRate}, 100`}
                         d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                         fill="none"
-                        stroke="#10b981"
+                        stroke="#7BCB91"
                         strokeWidth="3.8"
                       />
                     </svg>

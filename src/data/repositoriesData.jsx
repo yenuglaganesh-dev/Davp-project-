@@ -134,7 +134,7 @@ export const REPOSITORY_CARDS = [
     badge: 'Primary Catalog Data Source',
     description: 'Extensive academic repository providing free, open-access textbooks, lecture notes, and technical references covering Computer Science, Data Science, Math, and Engineering.',
     stats: '1,000+ Real Books Scraped • Direct Reading Links',
-    color: '#F47721'
+    color: '#7BCB91'
   },
   {
     id: 'repo-openstax',
@@ -144,7 +144,7 @@ export const REPOSITORY_CARDS = [
     badge: '100% Free & Open Access',
     description: 'Peer-reviewed, openly licensed college textbooks designed for introductory undergraduate curriculum in Math, Science, and Social Sciences.',
     stats: '70+ Core College Textbooks • 6M+ Students Saved',
-    color: '#F47721'
+    color: '#7BCB91'
   },
   {
     id: 'repo-gutenberg',
@@ -154,7 +154,7 @@ export const REPOSITORY_CARDS = [
     badge: 'Public Domain',
     description: 'The world’s oldest digital library archive offering free e-text versions of public domain books, classics, and historical academic treatises.',
     stats: '70,000+ Free Titles • No Registration Required',
-    color: '#059669'
+    color: '#7BCB91'
   },
   {
     id: 'repo-openlibrary',
@@ -164,7 +164,7 @@ export const REPOSITORY_CARDS = [
     badge: 'Internet Archive Initiative',
     description: 'An open, editable library catalog building a web page for every book ever published, with digital lending and public scans.',
     stats: '30M+ Records • Millions of Accessible Scans',
-    color: '#F47721'
+    color: '#7BCB91'
   },
   {
     id: 'repo-doab',
@@ -174,7 +174,7 @@ export const REPOSITORY_CARDS = [
     badge: 'Peer-Reviewed Monographs',
     description: 'A community-driven discovery service indexing open access, peer-reviewed monographs and academic volumes from scholarly publishers.',
     stats: '85,000+ Academic Volumes • 700+ Publishers',
-    color: '#7c3aed'
+    color: '#7BCB91'
   },
   {
     id: 'repo-archive',
@@ -184,7 +184,7 @@ export const REPOSITORY_CARDS = [
     badge: 'Non-profit Library',
     description: 'A non-profit library of millions of free books, historical texts, research papers, movies, software, and audio recordings.',
     stats: '44M+ Books & Texts • Controlled Digital Lending',
-    color: '#d97706'
+    color: '#7BCB91'
   },
   {
     id: 'repo-ndli',
@@ -194,7 +194,7 @@ export const REPOSITORY_CARDS = [
     badge: 'MHRD / IIT Kharagpur',
     description: 'Sponsored by the Ministry of Education, NDLI integrates educational resources from school to postgraduate across all disciplines.',
     stats: '90M+ Digital Learning Materials • Multi-Lingual',
-    color: '#ea580c'
+    color: '#7BCB91'
   }
 ];
 

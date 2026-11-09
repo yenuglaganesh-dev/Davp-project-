@@ -5,6 +5,7 @@ import {
   CheckCircle, AlertTriangle, XCircle, Star, Sparkles, MapPin, Tag
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 import DriftWall from './DriftWall';
 
 export default function FeaturedTextbooks({
@@ -21,6 +22,7 @@ export default function FeaturedTextbooks({
   onImportCsv
 }) {
   const { isAdmin, hasPermission, triggerAccessDenied } = useAuth();
+  const { theme } = useTheme();
   const [availabilityFilter, setAvailabilityFilter] = useState('ALL'); // ALL, AVAILABLE, LOW_STOCK
   const [sortBy, setSortBy] = useState('FEATURED'); // FEATURED, YEAR_DESC, TITLE_ASC, PRICE_ASC, RATING_DESC
   const [itemsPerPage, setItemsPerPage] = useState(12);
@@ -73,33 +75,33 @@ export default function FeaturedTextbooks({
 
   const displayedBooks = filteredBooks.slice(0, itemsPerPage);
 
-  // Responsive DriftWall columns: 5 on desktop, 4 on tablet, 3 on mobile
-  const [driftColumns, setDriftColumns] = useState(() => {
-    if (typeof window === 'undefined') return 5;
-    if (window.innerWidth < 640) return 3;
-    if (window.innerWidth < 1024) return 4;
-    return 5;
-  });
+  // Device-based responsive configuration for 3D DriftWall
+  const getDeviceDriftConfig = () => {
+    if (typeof window === 'undefined') {
+      return { columns: 5, width: 190, height: 250, tilt: 12, turn: -10, lift: 55, gap: 18, depth: 100 };
+    }
+    const w = window.innerWidth;
+    if (w < 480) {
+      // Mobile phones (iPhone, Galaxy, Pixel)
+      return { columns: 2, width: 115, height: 155, tilt: 4, turn: -2, lift: 18, gap: 10, depth: 30 };
+    }
+    if (w < 768) {
+      // Large phones / small tablets
+      return { columns: 3, width: 135, height: 180, tilt: 7, turn: -4, lift: 28, gap: 14, depth: 55 };
+    }
+    if (w < 1024) {
+      // Tablets / iPad / small laptops
+      return { columns: 4, width: 165, height: 220, tilt: 10, turn: -8, lift: 42, gap: 16, depth: 80 };
+    }
+    // Desktop monitors
+    return { columns: 5, width: 190, height: 250, tilt: 12, turn: -10, lift: 55, gap: 18, depth: 100 };
+  };
 
-  const [tileDimensions, setTileDimensions] = useState(() => {
-    if (typeof window === 'undefined') return { width: 190, height: 250 };
-    if (window.innerWidth < 640) return { width: 140, height: 185 };
-    if (window.innerWidth < 1024) return { width: 165, height: 220 };
-    return { width: 190, height: 250 };
-  });
+  const [driftConfig, setDriftConfig] = useState(getDeviceDriftConfig);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setDriftColumns(3);
-        setTileDimensions({ width: 140, height: 185 });
-      } else if (window.innerWidth < 1024) {
-        setDriftColumns(4);
-        setTileDimensions({ width: 165, height: 220 });
-      } else {
-        setDriftColumns(5);
-        setTileDimensions({ width: 190, height: 250 });
-      }
+      setDriftConfig(getDeviceDriftConfig());
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -188,32 +190,32 @@ export default function FeaturedTextbooks({
           <div className="driftwall-frame">
             <DriftWall
               items={driftWallItems}
-              columns={driftColumns}
-              tileWidth={tileDimensions.width}
-              tileHeight={tileDimensions.height}
-              gap={18}
-              radius={12}
-              tilt={12}
-              turn={-10}
+              columns={driftConfig.columns}
+              tileWidth={driftConfig.width}
+              tileHeight={driftConfig.height}
+              gap={driftConfig.gap}
+              radius={10}
+              tilt={driftConfig.tilt}
+              turn={driftConfig.turn}
               roll={0}
               perspective={1200}
-              depth={100}
-              speed={30}
+              depth={driftConfig.depth}
+              speed={28}
               direction="up"
-              variance={0.4}
-              parallax={0.45}
+              variance={0.35}
+              parallax={0.35}
               pauseOnHover={false}
-              lift={55}
+              lift={driftConfig.lift}
               fade={0.55}
               dim={0.7}
               grayscale={false}
-              overlayColor="#07152b"
+              overlayColor={theme === 'dark' ? 'rgba(18, 18, 18, 0.85)' : '#F0FAF2'}
               onTileClick={(book) => onOpenBookDetails(book)}
             />
           </div>
 
           <div className="driftwall-guide-pill">
-            <BookOpen size={14} className="text-cyan" />
+            <BookOpen size={14} style={{ color: 'var(--color-primary)' }} />
             <span>Click any moving textbook tile above to open verified book details, syllabus & direct reading access</span>
           </div>
         </div>
@@ -432,7 +434,7 @@ export default function FeaturedTextbooks({
                         <Star size={11} className="star-icon" fill="currentColor" />
                         <span>{book.rating || '4.5'}</span>
                       </span>
-                      <span className="price-pill" style={{ color: '#F47721' }}>
+                      <span className="price-pill" style={{ color: 'var(--color-primary)' }}>
                         Free eBook
                       </span>
                     </div>

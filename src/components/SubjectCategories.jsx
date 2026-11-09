@@ -11,7 +11,8 @@ export const CATEGORIES_DATA = [
     name: 'Data Science',
     filterSubject: 'Data Science',
     icon: <Database size={26} />,
-    color: '#F47721', bg: 'rgba(244, 119, 33, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Statistical Modeling', 'Exploratory Analysis', 'Pipelines', 'Predictive Modeling'],
     count: 'FreeComputerBooks'
   },
@@ -20,8 +21,8 @@ export const CATEGORIES_DATA = [
     name: 'Machine Learning',
     filterSubject: 'Machine Learning',
     icon: <Sparkles size={26} />,
-    color: '#ea580c',
-    bg: 'rgba(234, 88, 12, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Supervised Learning', 'Neural Networks', 'Model Evaluation', 'Deep Architectures'],
     count: 'FreeComputerBooks'
   },
@@ -30,8 +31,8 @@ export const CATEGORIES_DATA = [
     name: 'Algorithms & Data Structures',
     filterSubject: 'Algorithms and Data Structures',
     icon: <Binary size={26} />,
-    color: '#d97706',
-    bg: 'rgba(217, 119, 6, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Algorithm Design', 'Dynamic Programming', 'Graph Theory', 'Optimization'],
     count: 'FreeComputerBooks'
   },
@@ -40,8 +41,8 @@ export const CATEGORIES_DATA = [
     name: 'Artificial Intelligence',
     filterSubject: 'Artificial Intelligence',
     icon: <BrainCircuit size={26} />,
-    color: '#f43f5e',
-    bg: 'rgba(244, 63, 94, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Edge AI Systems', 'AI Auditing', 'Ethics & Philosophy', 'Cognitive Computing'],
     count: 'FreeComputerBooks'
   },
@@ -50,8 +51,8 @@ export const CATEGORIES_DATA = [
     name: 'Python Programming',
     filterSubject: 'Python Programming',
     icon: <Code size={26} />,
-    color: '#eab308',
-    bg: 'rgba(234, 179, 8, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Python 3 Foundations', 'Computational Problem Solving', 'Scientific Stacks', 'Automations'],
     count: 'FreeComputerBooks'
   },
@@ -60,8 +61,8 @@ export const CATEGORIES_DATA = [
     name: 'Data Analysis & Mining',
     filterSubject: 'Data Analysis and Data Mining',
     icon: <LineChart size={26} />,
-    color: '#06b6d4',
-    bg: 'rgba(6, 182, 212, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Advanced Data Analysis', 'Mining Paradigms', 'Elementary Principles', 'Data Wrangling'],
     count: 'FreeComputerBooks'
   },
@@ -70,7 +71,8 @@ export const CATEGORIES_DATA = [
     name: 'C and C++',
     filterSubject: 'C and C++',
     icon: <Cpu size={26} />,
-    color: '#C9C17C', bg: 'rgba(201, 193, 124, 0.15)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['High Performance Systems', 'Memory Management', 'Modern C++20', 'Concurrency'],
     count: 'FreeComputerBooks'
   },
@@ -79,8 +81,8 @@ export const CATEGORIES_DATA = [
     name: 'JavaScript & Web',
     filterSubject: 'JavaScript',
     icon: <TrendingUp size={26} />,
-    color: '#f59e0b',
-    bg: 'rgba(245, 158, 11, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Modern JavaScript', 'Frontend Paradigms', 'Async Event Loop', 'Fullstack Node.js'],
     count: 'FreeComputerBooks'
   },
@@ -89,8 +91,8 @@ export const CATEGORIES_DATA = [
     name: 'Statistics',
     filterSubject: 'Statistics',
     icon: <Network size={26} />,
-    color: '#14b8a6',
-    bg: 'rgba(20, 184, 166, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Bayesian Inference', 'Probability Theory', 'Hypothesis Testing', 'Statistical Learning'],
     count: 'FreeComputerBooks'
   },
@@ -99,8 +101,8 @@ export const CATEGORIES_DATA = [
     name: 'Mathematics',
     filterSubject: 'Mathematics',
     icon: <Calculator size={26} />,
-    color: '#ea580c',
-    bg: 'rgba(234, 88, 12, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Linear Algebra', 'Multivariate Calculus', 'Discrete Mathematics', 'Numerical Methods'],
     count: 'FreeComputerBooks'
   },
@@ -109,8 +111,8 @@ export const CATEGORIES_DATA = [
     name: 'Linux and Unix',
     filterSubject: 'Linux and Unix',
     icon: <Terminal size={26} />,
-    color: '#84cc16',
-    bg: 'rgba(132, 204, 22, 0.12)',
+    color: 'var(--color-primary-dark, #388E55)',
+    bg: 'var(--bg-badge, #E3F5E7)',
     topics: ['Kernel Internals', 'Shell Scripting', 'POSIX Administration', 'System Calls'],
     count: 'FreeComputerBooks'
   }

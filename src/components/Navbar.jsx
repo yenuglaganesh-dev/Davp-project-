@@ -78,7 +78,7 @@ export default function Navbar({
             title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
             aria-label="Toggle theme mode"
           >
-            {theme === 'dark' ? <Sun size={16} className="text-amber" /> : <Moon size={16} className="text-blue" />}
+            {theme === 'dark' ? <Sun size={16} className="text-green" /> : <Moon size={16} className="text-green" />}
             <span className="theme-toggle-label">{theme === 'dark' ? 'Light' : 'Dark'}</span>
           </button>
 
@@ -150,7 +150,7 @@ export default function Navbar({
               </div>
               <div className="profile-text">
                 <span className="profile-name">{user.name.split(' ')[0]}</span>
-                <span className="profile-role text-blue">
+                <span className="profile-role text-green">
                   STUDENT
                 </span>
               </div>

@@ -6,10 +6,16 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  touch-action: pan-y;
   z-index: 0;
   user-select: none;
   pointer-events: auto;
-  background: #ffffff; /* Clean pure white library canvas */
+  background: var(--bg-primary, #ffffff); /* Library canvas */
+}
+
+[data-theme="dark"] .grid-motion-container,
+body.dark-mode .grid-motion-container {
+  background: #121212;
 }
 
 /* Tilted Stage */
@@ -43,11 +49,20 @@
   border-radius: var(--grid-radius, 12px);
   overflow: hidden;
   box-shadow: 
-    0 10px 25px -5px rgba(244, 119, 33, 0.12),
+    0 10px 25px -5px rgba(123, 203, 145, 0.12),
     0 8px 16px -6px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(240, 229, 220, 0.8);
-  background: #ffffff;
+    0 0 0 1px var(--border-subtle, #E0EEE3);
+  background: var(--bg-card, #ffffff);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .grid-motion-card,
+body.dark-mode .grid-motion-card {
+  background: #222222;
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.5),
+    0 8px 16px -6px rgba(0, 0, 0, 0.3),
+    0 0 0 1px #383838;
 }
 
 .card-inner {
@@ -99,7 +114,7 @@
   right: 8px;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(6px);
-  color: #F47721;
+  color: #388E55;
   font-size: 10px;
   font-weight: 700;
   padding: 4px 8px;
@@ -108,10 +123,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 1px solid #F0E5DC;
+  border: 1px solid #E0EEE3;
   letter-spacing: 0.3px;
   pointer-events: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] .card-subject-pill,
+body.dark-mode .card-subject-pill {
+  background: rgba(34, 34, 34, 0.94);
+  color: #9BE0AB;
+  border-color: #383838;
 }
 
 /* Interactive Spotlight Layer */
@@ -138,8 +160,18 @@
   background: radial-gradient(
     ellipse at center,
     rgba(255, 255, 255, 0.75) 0%,
-    rgba(255, 244, 235, 0.85) 60%,
+    rgba(240, 250, 242, 0.85) 60%,
     rgba(255, 255, 255, 0.95) 100%
+  );
+}
+
+[data-theme="dark"] .grid-motion-dimmer,
+body.dark-mode .grid-motion-dimmer {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(18, 18, 18, 0.75) 0%,
+    rgba(26, 36, 29, 0.85) 60%,
+    rgba(18, 18, 18, 0.96) 100%
   );
 }
 
@@ -166,6 +198,24 @@
   opacity: var(--fade-opacity, 0.85);
 }
 
+[data-theme="dark"] .grid-motion-fade-mask,
+body.dark-mode .grid-motion-fade-mask {
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 0.92) 0%,
+    transparent 18%,
+    transparent 78%,
+    #121212 100%
+  ),
+  linear-gradient(
+    to right,
+    rgba(18, 18, 18, 0.9) 0%,
+    transparent 15%,
+    transparent 85%,
+    rgba(18, 18, 18, 0.9) 100%
+  );
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .grid-motion-stage {
@@ -181,6 +231,22 @@
   }
   .card-subject-pill {
     display: none; /* Keep mobile view clean */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-motion-stage {
+    width: 280%;
+    transform: translate(-50%, -50%) rotate(-2deg) scale(1);
+    gap: 10px;
+  }
+  .grid-motion-row {
+    gap: 10px;
+  }
+  .grid-motion-card {
+    width: 110px !important;
+    height: 150px !important;
+    border-radius: 8px;
   }
 }
 

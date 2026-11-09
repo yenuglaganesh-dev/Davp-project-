@@ -41,20 +41,34 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: var(--bg-card, #FFFFFF);
+  border: 1px solid var(--border-subtle, #E0EEE3);
   border-radius: 12px;
   padding: 10px 18px;
   backdrop-filter: blur(8px);
   transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .logoloop-card:hover {
-  background: rgba(201, 193, 124, 0.15);
-  border-color: rgba(201, 193, 124, 0.5);
+  background: var(--bg-card-hover, #F0FAF2);
+  border-color: var(--color-primary, #7BCB91);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(201, 193, 124, 0.25);
+  box-shadow: 0 6px 16px rgba(123, 203, 145, 0.15);
+}
+
+[data-theme="dark"] .logoloop-card,
+body.dark-mode .logoloop-card {
+  background: #222222;
+  border-color: #383838;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .logoloop-card:hover,
+body.dark-mode .logoloop-card:hover {
+  background: #2a2a2a;
+  border-color: #7BCB91;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .logoloop-icon {
@@ -64,8 +78,14 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #F47721;
+  background: var(--bg-badge, #E3F5E7);
+  color: var(--color-primary-dark, #388E55);
+}
+
+[data-theme="dark"] .logoloop-icon,
+body.dark-mode .logoloop-icon {
+  background: #1f3325;
+  color: #9BE0AB;
 }
 
 .logoloop-info {
@@ -74,19 +94,29 @@
 }
 
 .logoloop-name {
-  color: #242424;
+  color: var(--color-text-primary, #242424);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.2px;
   white-space: nowrap;
 }
 
+[data-theme="dark"] .logoloop-name,
+body.dark-mode .logoloop-name {
+  color: #FFFFFF;
+}
+
 .logoloop-category {
-  color: #777777;
+  color: var(--color-text-secondary, #777777);
   font-size: 10.5px;
   font-weight: 500;
   letter-spacing: 0.3px;
   text-transform: uppercase;
+}
+
+[data-theme="dark"] .logoloop-category,
+body.dark-mode .logoloop-category {
+  color: #BDBDBD;
 }
 
 /* Edge Fade Gradients */
@@ -103,12 +133,43 @@
 
 .logoloop-container.fade-edges::before {
   left: 0;
-  background: linear-gradient(to right, #FFFFFF, transparent);
+  background: linear-gradient(to right, var(--bg-primary, #FFFFFF), transparent);
 }
 
 .logoloop-container.fade-edges::after {
   right: 0;
-  background: linear-gradient(to left, #FFFFFF, transparent);
+  background: linear-gradient(to left, var(--bg-primary, #FFFFFF), transparent);
+}
+
+[data-theme="dark"] .logoloop-container.fade-edges::before,
+body.dark-mode .logoloop-container.fade-edges::before {
+  background: linear-gradient(to right, #121212, transparent) !important;
+}
+
+[data-theme="dark"] .logoloop-container.fade-edges::after,
+body.dark-mode .logoloop-container.fade-edges::after {
+  background: linear-gradient(to left, #121212, transparent) !important;
+}
+
+@media (max-width: 640px) {
+  .logoloop-container.fade-edges::before,
+  .logoloop-container.fade-edges::after {
+    width: 35px;
+  }
+  .logoloop-card {
+    padding: 7px 12px;
+    gap: 8px;
+  }
+  .logoloop-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .logoloop-name {
+    font-size: 12.5px;
+  }
+  .logoloop-category {
+    font-size: 9.5px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -116,4 +177,3 @@
     animation-play-state: paused;
   }
 }
-
