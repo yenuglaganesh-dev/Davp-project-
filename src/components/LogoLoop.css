@@ -2,7 +2,10 @@
 
 .logoloop-container {
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
   position: relative;
   padding: 18px 0;
   display: flex;

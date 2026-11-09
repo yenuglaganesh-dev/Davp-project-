@@ -1,8 +1,11 @@
 .drift-wall {
   position: relative;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
   touch-action: pan-y;
   perspective: var(--dw-perspective, 1200px);
   perspective-origin: 50% 50%;

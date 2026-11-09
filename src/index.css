@@ -134,15 +134,30 @@ html {
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
+  width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+  overflow-x: clip;
   min-height: 100vh;
   line-height: 1.6;
   background-color: var(--bg-primary);
   color: var(--color-text-primary);
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  min-height: 100vh;
 }
 
 ::selection {
@@ -183,6 +198,10 @@ body {
 
 /* App Root Container */
 .app-root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -190,9 +209,41 @@ body {
   background-color: var(--bg-primary);
 }
 
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  position: relative;
+}
+
 [data-theme="dark"] .app-root,
 body.dark-mode .app-root {
   background-color: #121212 !important;
+}
+
+/* Strict Layout Containment & Responsive Overflow Protection */
+.hero-section,
+.platforms-logoloop-section,
+.categories-section,
+.explore-section,
+.repositories-section,
+.analytics-section,
+.ai-recommendations-section,
+.about-section,
+.footer-root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip !important;
+  contain: paint;
+  position: relative;
+}
+
+.platforms-logoloop-section {
+  padding: 40px 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 /* Common Section Layout */
@@ -583,6 +634,10 @@ body.dark-mode .app-root {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
+  width: 100%;
+  max-width: 100%;
   padding: 130px 24px 60px 24px;
   background: radial-gradient(circle at 50% 20%, #F0FAF2 0%, #FFFFFF 80%);
 }
@@ -639,6 +694,10 @@ body.dark-mode .app-root {
   letter-spacing: -1.2px;
   margin-bottom: 20px;
   text-shadow: none;
+}
+
+.hero-heading-line {
+  display: block;
 }
 
 .hero-heading-gradient {
@@ -4307,15 +4366,23 @@ body.dark-mode .app-root {
     padding: 85px 12px 35px 12px;
   }
   .hero-badge-pill {
-    font-size: 11px;
+    font-size: 10.5px;
     padding: 5px 12px;
     margin-bottom: 16px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
   }
   .hero-heading {
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: -0.5px;
     line-height: 1.25;
     margin-bottom: 14px;
+    word-break: break-word;
+  }
+  .hero-heading-line {
+    display: block;
   }
   .hero-description {
     font-size: 14px;
@@ -4458,6 +4525,66 @@ body.dark-mode .app-root {
   .iqr-summary-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  /* Subject Bars Mobile */
+  .subject-bar-row {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 12px 0 !important;
+  }
+  .subject-name-col {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  .bar-progress-col {
+    width: 100% !important;
+  }
+  .bar-values-col {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  /* Valuation Bars Mobile */
+  .valuation-bar-row {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+    padding: 10px 0 !important;
+  }
+  .val-subject-name {
+    width: 100% !important;
+  }
+  .val-metric-num {
+    text-align: left !important;
+  }
+
+  /* Freshness Analysis Mobile */
+  .freshness-analysis-box {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Timeline Histogram Mobile */
+  .timeline-histogram {
+    overflow-x: auto !important;
+    padding-bottom: 16px !important;
+    -webkit-overflow-scrolling: touch !important;
+    min-width: 100% !important;
+  }
+
+  /* Category Cards Mobile */
+  .category-card {
+    padding: 16px 14px !important;
+  }
+  .category-topics-pills {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+  .category-mini-pill {
+    font-size: 10.5px !important;
+    padding: 3px 8px !important;
   }
 
   /* AI Recommendations Mobile */

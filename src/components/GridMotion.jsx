@@ -64,7 +64,8 @@ export default function GridMotion({
   // Prepare items for each row: repeat so each row has enough books for seamless loop
   const rowItems = useMemo(() => {
     if (!items || items.length === 0) return [];
-    const minItemsPerRow = 14; // Plenty of items to span wide displays
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 640;
+    const minItemsPerRow = isMobile ? 6 : 14; // Clean, contained item count on mobile
     const repeated = [];
     while (repeated.length < minItemsPerRow * rows) {
       repeated.push(...items);

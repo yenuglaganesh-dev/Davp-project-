@@ -74,11 +74,11 @@ export default function HeroSection({ searchQuery, setSearchQuery, onSearchSubmi
           <span>Next-Generation Academic Digital Library & Inventory Analytics</span>
         </div>
 
-        {/* Main Heading with Orange highlighted word */}
+        {/* Main Heading */}
         <h1 className="hero-heading">
-          Discover Knowledge. <br className="hero-br" />
-          <span className="hero-heading-gradient">Explore Books.</span> <br className="hero-br" />
-          Learn Without Limits.
+          <span className="hero-heading-line">Discover Knowledge.</span>
+          <span className="hero-heading-gradient hero-heading-line">Explore Books.</span>
+          <span className="hero-heading-line">Learn Without Limits.</span>
         </h1>
 
         {/* Description as requested */}
@@ -94,9 +94,9 @@ export default function HeroSection({ searchQuery, setSearchQuery, onSearchSubmi
               type="text"
               value={localSearch}
               onChange={(e) => setLocalSearch(e.target.value)}
-              placeholder="Search textbooks, subjects, authors, or topics..."
+              placeholder="Search textbooks, authors, topics..."
               className="hero-search-input"
-              aria-label="Search textbooks, subjects, authors, or topics"
+              aria-label="Search textbooks, authors, topics"
             />
             {localSearch && (
               <button

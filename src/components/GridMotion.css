@@ -4,8 +4,11 @@
   position: absolute;
   inset: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
   touch-action: pan-y;
   z-index: 0;
   user-select: none;
@@ -219,15 +222,15 @@ body.dark-mode .grid-motion-fade-mask {
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .grid-motion-stage {
-    width: 200%;
-    transform: translate(-50%, -50%) rotate(var(--grid-angle, -6deg)) scale(1.1);
+    width: 160%;
+    transform: translate(-50%, -50%) rotate(var(--grid-angle, -6deg)) scale(1.05);
   }
 }
 
 @media (max-width: 768px) {
   .grid-motion-stage {
-    width: 240%;
-    transform: translate(-50%, -50%) rotate(-4deg) scale(1.05);
+    width: 130%;
+    transform: translate(-50%, -50%) rotate(-3deg) scale(1);
   }
   .card-subject-pill {
     display: none; /* Keep mobile view clean */
@@ -236,16 +239,17 @@ body.dark-mode .grid-motion-fade-mask {
 
 @media (max-width: 480px) {
   .grid-motion-stage {
-    width: 280%;
-    transform: translate(-50%, -50%) rotate(-2deg) scale(1);
-    gap: 10px;
+    width: 115%;
+    max-width: 115vw;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    gap: 8px;
   }
   .grid-motion-row {
-    gap: 10px;
+    gap: 8px;
   }
   .grid-motion-card {
-    width: 110px !important;
-    height: 150px !important;
+    width: 100px !important;
+    height: 140px !important;
     border-radius: 8px;
   }
 }
