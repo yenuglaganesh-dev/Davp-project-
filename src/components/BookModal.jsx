@@ -70,7 +70,7 @@ export default function BookModal({ book, onClose, onBorrowBook }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-modal-open-external"
-                style={{ marginTop: '8px', background: 'rgba(201, 193, 124, 0.15)', color: '#C9C17C', borderColor: 'rgba(201, 193, 124, 0.35)' }}
+                style={{ marginTop: '8px', background: 'rgba(244, 119, 33, 0.12)', color: '#F47721', borderColor: 'rgba(244, 119, 33, 0.3)' }}
               >
                 <ExternalLink size={14} />
                 <span>FreeComputerBooks Page</span>

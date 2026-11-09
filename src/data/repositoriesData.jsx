@@ -134,7 +134,7 @@ export const REPOSITORY_CARDS = [
     badge: 'Primary Catalog Data Source',
     description: 'Extensive academic repository providing free, open-access textbooks, lecture notes, and technical references covering Computer Science, Data Science, Math, and Engineering.',
     stats: '1,000+ Real Books Scraped • Direct Reading Links',
-    color: '#C9C17C'
+    color: '#F47721'
   },
   {
     id: 'repo-openstax',
@@ -144,7 +144,7 @@ export const REPOSITORY_CARDS = [
     badge: '100% Free & Open Access',
     description: 'Peer-reviewed, openly licensed college textbooks designed for introductory undergraduate curriculum in Math, Science, and Social Sciences.',
     stats: '70+ Core College Textbooks • 6M+ Students Saved',
-    color: '#C9C17C'
+    color: '#F47721'
   },
   {
     id: 'repo-gutenberg',
@@ -164,7 +164,7 @@ export const REPOSITORY_CARDS = [
     badge: 'Internet Archive Initiative',
     description: 'An open, editable library catalog building a web page for every book ever published, with digital lending and public scans.',
     stats: '30M+ Records • Millions of Accessible Scans',
-    color: '#C9C17C'
+    color: '#F47721'
   },
   {
     id: 'repo-doab',

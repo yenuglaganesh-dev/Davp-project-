@@ -432,7 +432,7 @@ export default function FeaturedTextbooks({
                         <Star size={11} className="star-icon" fill="currentColor" />
                         <span>{book.rating || '4.5'}</span>
                       </span>
-                      <span className="price-pill" style={{ color: '#C9C17C' }}>
+                      <span className="price-pill" style={{ color: '#F47721' }}>
                         Free eBook
                       </span>
                     </div>

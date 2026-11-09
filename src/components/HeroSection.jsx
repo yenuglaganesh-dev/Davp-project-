@@ -63,17 +63,18 @@ export default function HeroSection({ searchQuery, setSearchQuery, onSearchSubmi
         theme={theme}
       />
 
-      {/* 2. Dark Navy Gradient Overlay for Text Readability & Professional Contrast */}
+      {/* 2. White Clean Soft Gradient Overlay for Crisp Readability */}
       <div className="hero-navy-overlay" />
 
       {/* 3. Hero Foreground Content (Positioned in front with z-index) */}
       <div className="hero-content-wrapper">
         <div className="hero-badge-pill">
+          <span className="hero-badge-dot"></span>
           <Sparkles size={14} className="badge-sparkle-icon" />
           <span>Next-Generation Academic Digital Library & Inventory Analytics</span>
         </div>
 
-        {/* Main Heading as requested */}
+        {/* Main Heading with Orange highlighted word */}
         <h1 className="hero-heading">
           Discover Knowledge. <br className="hero-br" />
           <span className="hero-heading-gradient">Explore Books.</span> <br className="hero-br" />

@@ -11,7 +11,7 @@ export const CATEGORIES_DATA = [
     name: 'Data Science',
     filterSubject: 'Data Science',
     icon: <Database size={26} />,
-    color: '#C9C17C', bg: 'rgba(201, 193, 124, 0.15)',
+    color: '#F47721', bg: 'rgba(244, 119, 33, 0.12)',
     topics: ['Statistical Modeling', 'Exploratory Analysis', 'Pipelines', 'Predictive Modeling'],
     count: 'FreeComputerBooks'
   },
@@ -20,8 +20,8 @@ export const CATEGORIES_DATA = [
     name: 'Machine Learning',
     filterSubject: 'Machine Learning',
     icon: <Sparkles size={26} />,
-    color: '#10b981',
-    bg: 'rgba(16, 185, 129, 0.12)',
+    color: '#ea580c',
+    bg: 'rgba(234, 88, 12, 0.12)',
     topics: ['Supervised Learning', 'Neural Networks', 'Model Evaluation', 'Deep Architectures'],
     count: 'FreeComputerBooks'
   },
@@ -30,8 +30,8 @@ export const CATEGORIES_DATA = [
     name: 'Algorithms & Data Structures',
     filterSubject: 'Algorithms and Data Structures',
     icon: <Binary size={26} />,
-    color: '#6366f1',
-    bg: 'rgba(99, 102, 241, 0.12)',
+    color: '#d97706',
+    bg: 'rgba(217, 119, 6, 0.12)',
     topics: ['Algorithm Design', 'Dynamic Programming', 'Graph Theory', 'Optimization'],
     count: 'FreeComputerBooks'
   },
@@ -40,8 +40,8 @@ export const CATEGORIES_DATA = [
     name: 'Artificial Intelligence',
     filterSubject: 'Artificial Intelligence',
     icon: <BrainCircuit size={26} />,
-    color: '#d946ef',
-    bg: 'rgba(217, 70, 239, 0.12)',
+    color: '#f43f5e',
+    bg: 'rgba(244, 63, 94, 0.12)',
     topics: ['Edge AI Systems', 'AI Auditing', 'Ethics & Philosophy', 'Cognitive Computing'],
     count: 'FreeComputerBooks'
   },

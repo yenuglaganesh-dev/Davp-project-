@@ -65,7 +65,7 @@
   height: 32px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
-  color: #C9C17C;
+  color: #F47721;
 }
 
 .logoloop-info {
@@ -74,7 +74,7 @@
 }
 
 .logoloop-name {
-  color: #f1f5f9;
+  color: #242424;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.2px;
@@ -82,7 +82,7 @@
 }
 
 .logoloop-category {
-  color: #94a3b8;
+  color: #777777;
   font-size: 10.5px;
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -103,12 +103,12 @@
 
 .logoloop-container.fade-edges::before {
   left: 0;
-  background: linear-gradient(to right, #050b18, transparent);
+  background: linear-gradient(to right, #FFFFFF, transparent);
 }
 
 .logoloop-container.fade-edges::after {
   right: 0;
-  background: linear-gradient(to left, #050b18, transparent);
+  background: linear-gradient(to left, #FFFFFF, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

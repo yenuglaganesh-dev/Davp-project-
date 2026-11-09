@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
+import cutmLogo from '../assets/cutm-logo.png';
 
 export default function Navbar({ 
   onOpenAddBook, 
@@ -49,10 +50,10 @@ export default function Navbar({
         {/* Brand Logo */}
         <a href="#home" className="navbar-brand">
           <div className="brand-logo-icon">
-            <img src="/src/assets/logo.png" alt="CUTM Logo" className="brand-logo-img" style={{height: '22px'}} />
+            <img src={cutmLogo} alt="CUTM Logo" className="brand-logo-img" style={{height: '24px', width: 'auto'}} />
           </div>
           <div className="brand-text-col">
-            <span className="brand-title">Central Textbook Library</span>
+            <span className="brand-title">Central <span className="brand-title-accent">Textbook Library</span></span>
             <span className="brand-subtitle">Academic Digital Repository & Analytics</span>
           </div>
         </a>
